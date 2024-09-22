@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #D7DDE5;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    align-items: center;
+    background-color: #18283b;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #8291a5;
+    padding: 8px 30px;
+    border-radius: 7px;
+    transition: all .3s ease;
+
+}
+
+ul li a:hover,
+ul li a:active {
+    color: #fff;
+    background: #0075ff;
+}
+
+#icone svg {
+    color: #fff;
+    height: 28px;
+    transition: all .3s ease;
+}
+
+#icone {
+    background: #0075ff;
+    padding: 5px 7px 3px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#icone:hover {
+    background: #fff;
+    background: #0075ff;
+
+}
+
+#icone:hover svg {
+    color: #fff;
+}
+
+#checkbox,
+#icone {
+    display: none;
+}
+
+@media (max-width:768px) {
+    nav {
+        border-bottom: 1px solid #455468;
+    }
+
+    ul {
+        position: absolute;
+        width: 40%;
+        height: 100vh;
+        background: #18283b;
+        right: 0;
+        top: 0;
+        text-align: center;
+        margin-top: 71px;
+        display: none;
+    }
+
+    ul li {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #icone {
+        display: block;
+        color: #0075ff;
+    }
+
+    #checkbox:checked~ul {
+        display: block;
+    }
+}
